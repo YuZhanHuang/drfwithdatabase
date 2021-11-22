@@ -11,13 +11,14 @@ from tutorials.models import Tutorial
 from tutorials.serializers import TutorialSerializer
 from rest_framework.decorators import api_view
 
+from rest_framework import generics
+
 
 @api_view(['GET', 'POST', 'DELETE'])
-def tutorial_list(request):
+def tutorial_list(request, *args, **kwargs):
     # GET list of tutorials, POST a new tutorial, DELETE all tutorials
     if request.method == 'GET':
         tutorials = Tutorial.objects.all()
-
         title = request.GET.get('title', None)
         if title is not None:
             tutorials = tutorials.filter(title__icontains=title)
@@ -36,7 +37,6 @@ def tutorial_list(request):
         count = Tutorial.objects.all().delete()
         return JsonResponse({'message': '{} Tutorials were deleted successfully!'.format(count[0])},
                             status=status.HTTP_204_NO_CONTENT)
-
 
 
 @api_view(['GET', 'PUT', 'DELETE'])

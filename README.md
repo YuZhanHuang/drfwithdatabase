@@ -41,8 +41,13 @@ REDIS_DB=0
 python manage.py 8000
 ```
 
+## API文件
 
-### 文件參考整理
+### 使用swagger生成API文件
+* 訪問`/swaggerui/`，可以查看API文件
+
+
+## 文件參考整理
 
 * [django-environ 官方文件](https://django-environ.readthedocs.io/en/latest/getting-started.html)
 * [poetry 官方文件](https://python-poetry.org/docs/)

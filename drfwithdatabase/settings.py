@@ -33,10 +33,10 @@ DEBUG = env('DEBUG')
 ALLOWED_HOSTS = []
 
 # Application definition
-CORS_ORIGIN_ALLOW_ALL = False
-CORS_ORIGIN_WHITELIST = (
-    'http://localhost:8081',
-)
+CORS_ORIGIN_ALLOW_ALL = True
+# CORS_ORIGIN_WHITELIST = (
+#     'http://localhost:8081',
+# )
 
 INSTALLED_APPS = [
     'django.contrib.admin',

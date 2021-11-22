@@ -26,8 +26,14 @@ poetry shell
 ### 撰寫`.env`檔案
 ```text=
 # 可以根據需要進行擴充
+# 要注意觀察settings.py用到哪些
 DEBUG=True
 DATABASE_URL='mysql://root:root@127.0.0.1:3306/testdb'
+REDIS_URL=redis://127.0.0.1:6379/1?client_class=django_redis.client.DefaultClient&password=ungithubbed-secret
+SECRET_KEY='l(k$cn#2j572iw+f#&2)n^#38zk^ul31bilhp&z+obd$m@s-w&'
+REDIS_HOST='localhost'
+REDIS_PORT=6379
+REDIS_DB=0
 ```
 
 ### 啟動專案

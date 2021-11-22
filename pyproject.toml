@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "drf-with-database"
+version = "0.1.0"
+description = "DRF with database"
+authors = ["YuZhanHuang <bigjoe1992111@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+Django = "2.1.15"
+djangorestframework = "3.11.0"
+PyMySQL = "0.9.3"
+django-cors-headers = "3.2.1"
+django-environ = "^0.8.1"
+django-redis = "4.4.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

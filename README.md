@@ -36,6 +36,20 @@ REDIS_PORT=6379
 REDIS_DB=0
 ```
 
+### 針對資料庫做遷移
+* 執行以下命令
+```bash
+python manage.py showmigrations
+python manage.py mkaemigrations 
+python manage.py migrate
+```
+* 以下為命令幫助
+```bash
+python manage.py -h
+python manage.py makemigrations -h
+python manage.py migrate -h
+```
+
 ### 啟動專案
 ```python=
 python manage.py 8000

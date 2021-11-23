@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'tutorials.apps.TutorialsConfig',
     'tutorials_redis.apps.TutorialsRedisConfig',
+    'tracking_api.apps.TrackingApiConfig',
     'corsheaders',
     'drf_yasg',
 ]
@@ -145,3 +146,5 @@ STATIC_URL = '/static/'
 REDIS_HOST = env.get_value('REDIS_HOST')
 REDIS_PORT = env.get_value('REDIS_PORT')
 REDIS_DB = env.int('REDIS_DB', 0)
+
+CELERY_BROKER_URL = env.str('CELERY_BROKER_URL', 'amqp://localhost')  # CELERY_BROKER_URL = 'amqp://localhost'
